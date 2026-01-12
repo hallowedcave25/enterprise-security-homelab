@@ -42,15 +42,6 @@ The initial deployment of the cybersecurity home lab has stalled due to a persis
 * **Windows 10:** Interface is up, has IP, but acts as if physically disconnected from the Kali network.
 * **VirtualBox:** Network indicates "Active," but traffic is not routing between guests.
 
-## 4. Relevant Documentation (Screenshots)
-
-*Reference the following screenshots in the `assets/` folder:*
-
-1.  **`01_vbox_network_settings.png`**: Showing both VMs attached to "NAT Network".
-2.  **`02_ip_config_mismatch.png`**: Side-by-side terminal view of `ip a` (Kali) and `ipconfig` (Windows).
-3.  **`03_ping_timeout.png`**: The terminal output on Kali showing the "Destination Host Unreachable" error.
-4.  **`04_windows_firewall_off.png`**: Proof that Windows Defender is fully disabled.
-5.  **`05_browser_failure.png`**: The Edge browser error screen failing to load the Python server.
 
 ---
 *Logged by: hallowedcave25*
