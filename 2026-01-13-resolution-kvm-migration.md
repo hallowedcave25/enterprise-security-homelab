@@ -51,24 +51,12 @@ PING 192.168.100.175 (192.168.100.175) 56(84) bytes of data.
 64 bytes from 192.168.100.175: icmp_seq=1 ttl=128 time=0.632 ms
 64 bytes from 192.168.100.175: icmp_seq=2 ttl=128 time=0.646 ms
 ```
-Final Configuration
-Kali Linux:
-
+Final Configuration Kali Linux:
+--------------------------------
 eth0: Up (Internet Access)
-
 eth1: Up (192.168.100.170) - Waked up via nmcli
 
-Windows 10:
-
+Windows 10 Victim:
+--------------------------------
 Ethernet: Up (192.168.100.175)
-
 Firewall: DISABLED (Public/Private) to allow ICMP/Reverse Shells.
-
-5. Next Steps
-[ ] Deploy Wazuh Docker container on Kali.
-
-[ ] Install Wazuh Agent on Windows Victim.
-
-[ ] Execute "Atomic Red Team" test payloads.
----
-Logged by: hallowedcave25
