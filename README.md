@@ -12,7 +12,7 @@ To simulate a corporate network environment and practice Blue Team defense strat
 * **Defense Node:** Wazuh SIEM (Manager & Indexer)
 
 ### Implementation Roadmap
-- [x] Virtual Environment Setup (VirtualBox)
+- [x] Virtual Environment Setup (Virtual Machine Manager)
 - [x] Deploy Wazuh Agents on victim machines
 - [ ] Configure `iptables` and Firewall rules
 - [ ] Simulate Brute-Force SSH attack and verify SIEM alerts
