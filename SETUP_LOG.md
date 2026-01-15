@@ -50,21 +50,22 @@ Since Kali Linux is a rolling release, the standard Wazuh installation script fl
 ```bash
 curl -sO [https://packages.wazuh.com/4.14/wazuh-install.sh](https://packages.wazuh.com/4.14/wazuh-install.sh)
 sudo bash ./wazuh-install.sh -a -i
+```
 
--a: Automated installation (Manager + Indexer + Dashboard).
+- -a: Automated installation (Manager + Indexer + Dashboard).
 
--i: Ignore system compatibility checks (Required for Kali).
+- -i: Ignore system compatibility checks (Required for Kali).
 
-Verification: I confirmed the server processes were active by checking the local agent status:
+**Verification**: I confirmed the server processes were active by checking the local agent status:
 
-Bash
-
+```bash
 sudo /var/ossec/bin/agent_control -l
+```
 # Output: ID: 000, Name: attacker (server), IP: 127.0.0.1, Active/Local
-5. Windows Agent Setup (The Victim)
+## 5. Windows Agent Setup (The Victim)
 I reconfigured the Windows Agent to point to the Kali machine's Isolated IP (192.168.100.170) to ensure traffic stayed within the virtual lab cables.
 
-PowerShell Commands (Admin):
+```PowerShell Commands (Admin):
 
 PowerShell
 
@@ -77,23 +78,23 @@ Invoke-WebRequest -Uri [https://packages.wazuh.com/4.x/windows/wazuh-agent-4.14.
 
 # 3. Start Service
 Start-Service -Name WazuhSvc
-6. Access & Monitoring
+```
+## 6. Access & Monitoring
 Dashboard URL: https://127.0.0.1 (Accessed via Firefox inside Kali).
 
 Server Health: Checked via Wazuh Menu -> Server management -> Logs.
 
 Agent Status: Confirmed Windows agent appeared as Active (ID: 001).
 
-7. Testing Detection (EICAR)
+## 7. Testing Detection (EICAR)
 To verify the detection pipeline, I used the EICAR test string to simulate a malware infection.
 
 I created a file named virus.txt on the Windows Desktop containing the standard test signature:
 
-Plaintext
+```Plaintext
 
 X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+```
 Windows Defender immediately detected and deleted the file.
 
 Wazuh Alert: I verified the detection by checking Endpoint Security -> Malware Detection on the Kali Dashboard, looking for Rule ID 60122 (or similar AV alerts).
-
-Troubleshooting: If the alert doesn't appear, check archives.log or ensure the dashboard time filter is set to "Today".
