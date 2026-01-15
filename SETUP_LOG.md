@@ -61,7 +61,7 @@ sudo bash ./wazuh-install.sh -a -i
 ```bash
 sudo /var/ossec/bin/agent_control -l
 ```
-# Output: ID: 000, Name: attacker (server), IP: 127.0.0.1, Active/Local
+**Output**: ID: 000, Name: attacker (server), IP: 127.0.0.1, Active/Local
 ## 5. Windows Agent Setup (The Victim)
 I reconfigured the Windows Agent to point to the Kali machine's Isolated IP (192.168.100.170) to ensure traffic stayed within the virtual lab cables.
 
