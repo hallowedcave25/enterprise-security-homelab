@@ -8,7 +8,7 @@
 * **Host OS:** EndeavourOS (Arch Linux)
 * **Hypervisor:** KVM/QEMU (Windows VM)
 * **Wazuh Deployment:** Docker (Manager, Indexer, Dashboard)
-* **Agent Node:** Windows 10/11 VM (IP: `192.168.100.175`)
+* **Agent Node:** Windows 10 VM (IP: `192.168.100.175`)
 
 ---
 
