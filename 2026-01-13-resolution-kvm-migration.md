@@ -1,7 +1,7 @@
 # ✅ Resolution Report: Migration to KVM & Lab Success
 
 **Date:** January 13, 2026
-**Reference:** [Incident Report: Home Lab Connectivity Failure](./2026-01-11-connectivity-failure.md)
+**Reference:** [Incident Report: Home Lab Connectivity Failure](https://github.com/hallowedcave25/enterprise-security-homelab/blob/main/INCIDENT_REPORT_INITIAL_SETUP_FAILURES.md)
 **Status:** 🟢 **Resolved / Operational**
 **Environment:** KVM/QEMU (via virt-manager), Kali Linux (Attacker), Windows 10 (Victim), EndeavourOS (Host)
 
