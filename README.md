@@ -21,3 +21,5 @@ To simulate a corporate network environment and practice Blue Team defense strat
 * [ ] Install Tailscale inside both Virtual Machines.
 * [ ] Deploy the Wazuh Agent on the Windows 10 Victim Node and connect it to the server.
 * [ ] Simulate Windows and SSH attacks to trigger SIEM alerts.
+
+For Details visit: [Status Report](https://github.com/hallowedcave25/enterprise-security-homelab/blob/main/Status_Report.md).
